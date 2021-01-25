@@ -1,3 +1,6 @@
+arch:
+  - amd64
+  - ppc64le
 language: python
 
 python:
@@ -13,6 +16,11 @@ matrix:
   include:
     - python: 3.8-dev
       dist: xenial
+      arch: amd64
+    - python: 3.8-dev
+      dist: xenial
+      arch: ppc64le
+      
   allow_failures:
     - python: pypy3
     - python: 3.8-dev
